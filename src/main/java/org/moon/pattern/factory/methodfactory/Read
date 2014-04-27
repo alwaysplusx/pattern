@@ -1,0 +1,14 @@
+
+在工厂方法模式中，不再提供一个统一的工厂类来创建所有的产品对象
+而是针对不同的产品提供不同的工厂，系统提供一个与产品等级结构对应的工厂等级结构。
+	Logger			LoggerFactory
+	FileLogger	->	FileLoggerFactory
+	DBLogger	->	DBLoggerFactory
+
+工厂方法模式将对产品的创建延迟到工厂的子类中
+
+局限
+	增加新实现时，代码成对增加
+
+拓展
+	使用java反射方式，让代码中读取用户的配置加载不同的Factory
